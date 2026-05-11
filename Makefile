@@ -174,7 +174,6 @@ all: $(BUILD)
 
 $(BUILD):
 	@[ -d $@ ] || mkdir -p $@
-	#comment this out if you are hacking on the code or compilation will take forever
 	$(MAKE) --no-print-directory -C include/libusbhsfs BUILD_TYPE=GPL all
 	$(MAKE) --no-print-directory -C include/Plutonium -f Makefile all
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
