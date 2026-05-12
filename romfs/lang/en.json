@@ -26,7 +26,7 @@
         },
         "applet": {
             "title": "Applet Mode not supported",
-            "desc": "You may experience issues using Awoo Installer in Applet Mode. If you do\nhave problems, please switch to running Awoo Installer over an installed\ntitle (hold R while starting a game)!"
+            "desc": "You may experience issues using Leaf Installer in Applet Mode. If you do\nhave problems, please switch to running Leaf Installer over an installed\ntitle (hold R while starting a game)!"
         },
         "buttons": " Select     Exit",
         "storage": {
@@ -38,7 +38,7 @@
         "net": {
             "help": {
                 "title": "Help",
-                "desc": "Files can be installed remotely from your other devices using tools such\nas NS-USBloader in Tinfoil mode. To send files to your Switch, open one\nof these pieces of software on your PC or mobile device, input your\nSwitch's IP address (listed on-screen), select your files, then upload\nto your console! If the software you're using won't let you select\nspecific file types, try renaming the extension to something it accepts.\nAwoo Installer doesn't care about file extensions during net installations!\n\nIf you can't figure it out, just copy your files to your SD card and try\nthe \"Install from SD Card\" option on the main menu!"
+                "desc": "Files can be installed remotely from your other devices using tools such\nas NS-USBloader in Tinfoil mode. To send files to your Switch, open one\nof these pieces of software on your PC or mobile device, input your\nSwitch's IP address (listed on-screen), select your files, then upload\nto your console! If the software you're using won't let you select\nspecific file types, try renaming the extension to something it accepts.\nLeaf Installer doesn't care about file extensions during net installations!\n\nIf you can't figure it out, just copy your files to your SD card and try\nthe \"Install from SD Card\" option on the main menu!"
             },
             "src": {
                 "title": "Where do you want to install from?",
@@ -111,19 +111,10 @@
         },
         "nca_verify": {
             "title": "Invalid NCA signature detected!",
-            "desc": "Improperly signed software should only be installed from trustworthy\nsources. Files containing cartridge repacks and DLC unlockers will always\nshow this warning. You can disable this check in Awoo Installer's settings.\n\nAre you sure you want to continue the installation?",
+            "desc": "Improperly signed software should only be installed from trustworthy\nsources. Files containing cartridge repacks and DLC unlockers will always\nshow this warning. You can disable this check in Leaf Installer's settings.\n\nAre you sure you want to continue the installation?",
             "opt1": "Yes, I understand the risks",
             "error": "The requested NCA is not properly signed: "
-        },
-        "finished": [
-            "Enjoy your \"legal backups\"!",
-            "I'm sure after you give the game a try you'll have tons of fun actually buying it!",
-            "You buy gamu right? Nintendo-san thanka-you for your purchase!",
-            "Bypassing DRM is great, isn't it?",
-            "You probably saved like six trees by not buying the game! All that plastic goes somewhere!",
-            "Nintendo ninjas have been dispatched to your current location.",
-            "And we didn't even have to shove a political ideology down your throat to get here!"
-        ]
+        }
     },
     "sig": {
         "confirm_title": "Install Ultrahand and overlays?",
@@ -147,15 +138,15 @@
             "nca_verify": "Verify NCA signatures before installation",
             "boost_mode": "Enable \"boost mode\" during installations",
             "ask_delete": "Ask to delete original files after installation",
-            "auto_update": "Check for updates to Awoo Installer automatically",
-            "gay_option": "Remove anime",
-            "awoo_url": "Awoo Installer URL: ",
+            "auto_update": "Check for updates to Leaf Installer automatically",
+            "no_graphics_option": "Remove leaves",
+            "leaf_url": "Leaf Installer URL: ",
             "ultrahand_url": "Ultrahand Overlay URL: ",
             "sys_patch_url": "sys-patch URL: ",
             "emuiibo_url": "emuiibo URL: ",
             "amiibo_api_url": "Amiibo API URL: ",
             "language": "Language: ",
-            "check_update": "Check for updates to Awoo Installer",
+            "check_update": "Check for updates to Leaf Installer",
             "credits": "Credits"
         },
         "nca_warn": {
@@ -165,32 +156,32 @@
         },
         "update": {
             "title": "Update available",
-            "desc0": "Awoo Installer ",
+            "desc0": "Leaf Installer ",
             "desc1": " is available now! Ready to update?",
             "opt0": "Update",
-            "top_info": "Updating to Awoo Installer ",
-            "bot_info": "Downloading Awoo Installer ",
-            "bot_info2": "Extracting Awoo Installer ",
+            "top_info": "Updating to Leaf Installer ",
+            "bot_info": "Downloading Leaf Installer ",
+            "bot_info2": "Extracting Leaf Installer ",
             "complete": "Update complete!",
             "failed": "Update failed!",
             "end_desc": "The software will now be closed.",
             "title_check_fail": "No updates found",
-            "desc_check_fail": "You are on the latest version of Awoo Installer!"
+            "desc_check_fail": "You are on the latest version of Leaf Installer!"
         },
         "credits": {
             "title": "Thanks to the following people!",
-            "desc": "- HookedBehemoth for A LOT of contributions\n- Adubbz and other contributors for Tinfoil\n- XorTroll for Plutonium and Goldleaf\n- blawar (wife strangulator) and nicoboss for NSZ support\n- The kind folks at the AtlasNX Discuck (or at least some of them)\n- The also kind folks at the RetroNX Discuck (of no direct involvement)\n- namako8982 for the Momiji art\n- TheXzoron for being a baka\n- Claude for the incredible speed on iterating over features"
+            "desc": "- Plutonium (https://github.com/XorTroll/Plutonium) graphics library\n- Original Awoo Installer (https://github.com/Huntereb/Awoo-Installer)\n- Fork of Awoo Installer (https://github.com/harmonsir/Awoo-Installer) with HTTP and USB hard drive support\n- Claude (https://claude.ai/) for the incredible speed on iterating over features"
         },
         "language": {
-            "title": "Select Awoo Installer's language",
+            "title": "Select Leaf Installer's language",
             "desc": "The software will be closed after changing languages. Press B to cancel.",
             "system_language": "System"
         },
-        "title": "Change Awoo Installer's settings!",
+        "title": "Change Leaf Installer's settings!",
         "buttons": " Select/Change     Cancel",
         "ultrahand_hint": "Enter the GitHub releases URL for Ultrahand Overlay",
         "sys_patch_hint": "Enter the GitHub releases URL for sys-patch",
-        "awoo_hint": "Enter the GitHub releases URL for Awoo Installer",
+        "leaf_hint": "Enter the GitHub releases URL for Leaf Installer",
         "emuiibo_hint": "Enter the GitHub releases URL for emuiibo",
         "amiibo_api_hint": "Enter the Amiibo API JSON endpoint URL"
     },

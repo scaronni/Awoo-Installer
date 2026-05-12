@@ -26,7 +26,7 @@
         },
         "applet": {
             "title": "Applet Mode не поддерживается",
-            "desc": "В Awoo Installer могут возникнуть проблемы когда и если он запущен в режиме апплета.\nЕсли у вас есть трудности, пожалуйста запустите приложение через установленную игру\n(зажмите R при запуске)!"
+            "desc": "В Leaf Installer могут возникнуть проблемы когда и если он запущен в режиме апплета.\nЕсли у вас есть трудности, пожалуйста запустите приложение через установленную игру\n(зажмите R при запуске)!"
         },
         "buttons": " Выбрать     Выход",
         "storage": {
@@ -38,7 +38,7 @@
         "net": {
             "help": {
                 "title": "Помощь",
-                "desc": "Файлы могут быть установленны удалённо из другого вашего устройства используя такие утилиты как\nNS-USBloader в режиме Tinfoil. Чтобы передать файлы на Switch откройте одно из этих замечательных\nприложений на вашем ПК или мобильном устройстве, введите IP адрес вашего Switch (отображается на экране),\nвыберите файлы и затем загрузите их в вашу консоль! Если приложение которое вы используете не позволяет\nвыбрать определённый формат файла, попробуйте изменить его расширение.\nAwoo Installer не чувствителен\nк расширениям файла при установке по сети!\n\nЕсли вы ничего не поняли, просто скопируйте файлы на SD-карту и выберите в главном меню опцию\n\"Установка из SD-карты\"!"
+                "desc": "Файлы могут быть установленны удалённо из другого вашего устройства используя такие утилиты как\nNS-USBloader в режиме Tinfoil. Чтобы передать файлы на Switch откройте одно из этих замечательных\nприложений на вашем ПК или мобильном устройстве, введите IP адрес вашего Switch (отображается на экране),\nвыберите файлы и затем загрузите их в вашу консоль! Если приложение которое вы используете не позволяет\nвыбрать определённый формат файла, попробуйте изменить его расширение.\nLeaf Installer не чувствителен\nк расширениям файла при установке по сети!\n\nЕсли вы ничего не поняли, просто скопируйте файлы на SD-карту и выберите в главном меню опцию\n\"Установка из SD-карты\"!"
             },
             "src": {
                 "title": "Откуда будем устанавливать?",
@@ -108,19 +108,10 @@
         },
         "nca_verify": {
             "title": "Обнаружена неверная NCA подпись!",
-            "desc": "Неверно подписанное программное обеспечение должно устанавливаться исключительно из проверенных источников!\nФайлы содержащие перепакованные картриджи и разблокировщики DLC будут всегда приводить к показу этого\nпредупреждения. Вы можете отключить эту проверку в настройках Awoo Installer\n Вы уверены что хотите продолжить установку?",
+            "desc": "Неверно подписанное программное обеспечение должно устанавливаться исключительно из проверенных источников!\nФайлы содержащие перепакованные картриджи и разблокировщики DLC будут всегда приводить к показу этого\nпредупреждения. Вы можете отключить эту проверку в настройках Leaf Installer\n Вы уверены что хотите продолжить установку?",
             "opt1": "Да, я понимаю все риски",
             "error": "Запрашиваемый NCA неверно подписан: "
-        },
-        "finished": [
-            "Наслаждайтесь вашими \"легальными копиями\"!",
-            "Уверены, оценив игру вы получите массу удовольствия действительно купив её!",
-            "Семпай ведь купил игру, правда? Nintendo-сан благодарит Вас за покупку!",
-            "Обходить DRM - бесценно! Разве нет?",
-            "Возможно вы сохранили порядка шести деревьев просто не купив эту игру! И весь пластик куда-то делся!",
-            "Ниндзи из Nintendo успешно выяснили ваше текущее местоположение.",
-            "Чтобы сделать всё верно нам даже не потребовалось промывать вам мозги политическими заявлениями!"
-        ]
+        }
     },
     "sig": {
         "confirm_title": "Установить Ultrahand и оверлеи?",
@@ -145,14 +136,14 @@
             "boost_mode": "Включить \"boost-режим\" во время установки",
             "ask_delete": "Спрашивать разрешения удалять исходные файлы после установки",
             "auto_update": "Автоматически проверять наличие обновлений",
-            "gay_option": "Убрать аниме",
-            "awoo_url": "URL Awoo Installer: ",
+            "no_graphics_option": "Убрать листья",
+            "leaf_url": "URL Leaf Installer: ",
             "ultrahand_url": "URL Ultrahand Overlay: ",
             "sys_patch_url": "URL sys-patch: ",
             "emuiibo_url": "URL emuiibo: ",
             "amiibo_api_url": "URL API Amiibo: ",
             "language": "Язык: ",
-            "check_update": "Проверить наличие обновлений Awoo Installer",
+            "check_update": "Проверить наличие обновлений Leaf Installer",
             "credits": "Благодарности"
         },
         "nca_warn": {
@@ -162,32 +153,32 @@
         },
         "update": {
             "title": "Доступно обновление",
-            "desc0": "Awoo Installer ",
+            "desc0": "Leaf Installer ",
             "desc1": " уже доступен! Готовы обновиться?",
             "opt0": "Обновление",
-            "top_info": "Обновление Awoo Installer ",
-            "bot_info": "Загрузка Awoo Installer ",
-            "bot_info2": "Извлечение Awoo Installer ",
+            "top_info": "Обновление Leaf Installer ",
+            "bot_info": "Загрузка Leaf Installer ",
+            "bot_info2": "Извлечение Leaf Installer ",
             "complete": "Обновление завершено!",
             "failed": "Обновление провалилось!",
             "end_desc": "Сейчас приложение будет закрыто.",
             "title_check_fail": "Обновлений нет",
-            "desc_check_fail": "Вы уже используете последнюю версию Awoo Installer!"
+            "desc_check_fail": "Вы уже используете последнюю версию Leaf Installer!"
         },
         "credits": {
             "title": "Выражаем благодарность следующим людям:",
-            "desc": "- HookedBehemoth for A LOT of contributions\n- Adubbz and other contributors for Tinfoil\n- XorTroll for Plutonium and Goldleaf\n- blawar (wife strangulator) and nicoboss for NSZ support\n- The kind folks at the AtlasNX Discuck (or at least some of them)\n- The also kind folks at the RetroNX Discuck (of no direct involvement)\n- namako8982 for the Momiji art\n- TheXzoron for being a baka\n- Claude for the incredible speed on iterating over features"
+            "desc": "- Plutonium (https://github.com/XorTroll/Plutonium) graphics library\n- Original Awoo Installer (https://github.com/Huntereb/Awoo-Installer)\n- Fork of Awoo Installer (https://github.com/harmonsir/Awoo-Installer) with HTTP and USB hard drive support\n- Claude (https://claude.ai/) for the incredible speed on iterating over features"
         },
         "language": {
             "title": "Выбор языка",
             "desc": "После изменения языка приложение будет закрыто. Нажмите \"B\" для отмены.",
             "system_language": "Системный"
         },
-        "title": "Изменение настроек Awoo Installer!",
+        "title": "Изменение настроек Leaf Installer!",
         "buttons": " Выбрать/Изменить     Отмена",
         "ultrahand_hint": "Введите URL релизов GitHub для Ultrahand Overlay",
         "sys_patch_hint": "Введите URL релизов GitHub для sys-patch",
-        "awoo_hint": "Введите URL релизов GitHub для Awoo Installer",
+        "leaf_hint": "Введите URL релизов GitHub для Leaf Installer",
         "emuiibo_hint": "Введите URL релизов GitHub для emuiibo",
         "amiibo_api_hint": "Введите URL JSON-эндпоинта API Amiibo"
     },

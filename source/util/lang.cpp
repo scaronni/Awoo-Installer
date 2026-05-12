@@ -99,10 +99,4 @@ namespace Language {
         }
         return j.get<std::string>();
     }
-
-    std::string GetRandomMsg() {
-        json j = Language::GetRelativeJson(lang, "inst.finished");
-        srand(time(NULL));
-        return(j[rand() % j.size()]);
-    }
 }

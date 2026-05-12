@@ -26,7 +26,7 @@
         },
         "applet": {
             "title": "アプレットモードはサポートされていません",
-            "desc": "アプレットモードでAwoo Installerを使用すると問題が発生する場合があります。\n問題が発生した場合は、インストール済みのタイトルでAwoo Installerを実行するように切り替えてください\n(ゲームの開始中にRを押したままにしてください)!"
+            "desc": "アプレットモードでLeaf Installerを使用すると問題が発生する場合があります。\n問題が発生した場合は、インストール済みのタイトルでLeaf Installerを実行するように切り替えてください\n(ゲームの開始中にRを押したままにしてください)!"
         },
         "buttons": " 選択     終了",
         "storage": {
@@ -38,7 +38,7 @@
         "net": {
             "help": {
                 "title": "ヘルプ",
-                "desc": "TinfoilモードのNS-USBloaderなどのツールを使用して、他のデバイスからファイルをリモートでインストールできます。\nスイッチにファイルを送信するには、PCまたはモバイルデバイスでこれらのソフトウェアのいずれかを開き、\nスイッチのIPアドレス（画面に表示）を入力し、ファイルを選択して、コンソールにアップロードします！\n使用しているソフトウェアで特定のファイルタイプを選択できない場合は、\n拡張子の名前を受け入れ可能なものに変更してください。\nAwoo Installerはネット経由のインストール中にファイル拡張子を気にしません！\n\n分からない場合は、ファイルをSDカードにコピーして\nメインメニューの[SDカードからインストール]オプションを試してください。"
+                "desc": "TinfoilモードのNS-USBloaderなどのツールを使用して、他のデバイスからファイルをリモートでインストールできます。\nスイッチにファイルを送信するには、PCまたはモバイルデバイスでこれらのソフトウェアのいずれかを開き、\nスイッチのIPアドレス（画面に表示）を入力し、ファイルを選択して、コンソールにアップロードします！\n使用しているソフトウェアで特定のファイルタイプを選択できない場合は、\n拡張子の名前を受け入れ可能なものに変更してください。\nLeaf Installerはネット経由のインストール中にファイル拡張子を気にしません！\n\n分からない場合は、ファイルをSDカードにコピーして\nメインメニューの[SDカードからインストール]オプションを試してください。"
             },
             "src": {
                 "title": "どこからインストールしますか？",
@@ -108,19 +108,10 @@
         },
         "nca_verify": {
             "title": "無効なNCA署名が検出されました!",
-            "desc": "不適切に署名されたソフトウェアは、信頼できるソースからのみインストールする必要があります。\nカートリッジの再梱包とDLCロック解除を含むファイルには、常にこの警告が表示されます。\nAwoo Installerの設定でこのチェックを無効にできます。\n\nインストールを続行してもよろしいですか？",
+            "desc": "不適切に署名されたソフトウェアは、信頼できるソースからのみインストールする必要があります。\nカートリッジの再梱包とDLCロック解除を含むファイルには、常にこの警告が表示されます。\nLeaf Installerの設定でこのチェックを無効にできます。\n\nインストールを続行してもよろしいですか？",
             "opt1": "はい、リスクを理解しています",
             "error": "要求されたNCAは適切に署名されていません: "
-        },
-        "finished": [
-            "バックアップをお楽しみください！",
-            "そのゲームは自分で購入したものですか？",
-            "任天堂ありがとう!",
-            "DRMのバイパスは素晴らしいでしょ?",
-            "ダウンロード版を購入することで自然環境保護に協力しましょう！",
-            "任天堂の諜報員があなたの現在の場所に派遣されました。",
-            "ここに到達するために政治的なイデオロギーを喉に押し込む必要さえありませんでした!"
-        ]
+        }
     },
     "sig": {
         "confirm_title": "Ultrahand とオーバーレイをインストールしますか?",
@@ -144,15 +135,15 @@
             "nca_verify": "インストール前にNCA署名を検証する",
             "boost_mode": "インストール中に「ブーストモード」を有効にする",
             "ask_delete": "インストール後に元のファイルを削除するか尋ねる",
-            "auto_update": "Awoo Installerのアップデートを自動的に確認する",
-            "gay_option": "絵を非表示にする",
-            "awoo_url": "Awoo Installer URL: ",
+            "auto_update": "Leaf Installerのアップデートを自動的に確認する",
+            "no_graphics_option": "葉を削除",
+            "leaf_url": "Leaf Installer URL: ",
             "ultrahand_url": "Ultrahand Overlay URL: ",
             "sys_patch_url": "sys-patch URL: ",
             "emuiibo_url": "emuiibo URL: ",
             "amiibo_api_url": "Amiibo API URL: ",
             "language": "言語: ",
-            "check_update": "Awoo Installerのアップデートを確認",
+            "check_update": "Leaf Installerのアップデートを確認",
             "credits": "クレジット"
         },
         "nca_warn": {
@@ -162,32 +153,32 @@
         },
         "update": {
             "title": "更新可能",
-            "desc0": "Awoo Installer ",
+            "desc0": "Leaf Installer ",
             "desc1": " 現在入手可能です！更新する準備ができましたか?",
             "opt0": "アップデート",
-            "top_info": "Awoo Installerを更新 ",
-            "bot_info": "Awoo Installerをダウンロード中 ",
-            "bot_info2": "Awoo Installerを展開中 ",
+            "top_info": "Leaf Installerを更新 ",
+            "bot_info": "Leaf Installerをダウンロード中 ",
+            "bot_info2": "Leaf Installerを展開中 ",
             "complete": "更新完了!",
             "failed": "更新失敗!",
             "end_desc": "これでソフト​​ウェアが閉じられます。",
             "title_check_fail": "更新が見つかりません",
-            "desc_check_fail": "既にAwoo Installerの最新バージョンを使用しています!"
+            "desc_check_fail": "既にLeaf Installerの最新バージョンを使用しています!"
         },
         "credits": {
             "title": "以下の方々に感謝します!",
-            "desc": "- HookedBehemoth for A LOT of contributions\n- Adubbz and other contributors for Tinfoil\n- XorTroll for Plutonium and Goldleaf\n- blawar (wife strangulator) and nicoboss for NSZ support\n- The kind folks at the AtlasNX Discuck (or at least some of them)\n- The also kind folks at the RetroNX Discuck (of no direct involvement)\n- namako8982 for the Momiji art\n- TheXzoron for being a baka\n- Claude for the incredible speed on iterating over features"
+            "desc": "- Plutonium (https://github.com/XorTroll/Plutonium) graphics library\n- Original Awoo Installer (https://github.com/Huntereb/Awoo-Installer)\n- Fork of Awoo Installer (https://github.com/harmonsir/Awoo-Installer) with HTTP and USB hard drive support\n- Claude (https://claude.ai/) for the incredible speed on iterating over features"
         },
         "language": {
-            "title": "Awoo Installerの言語を選択",
+            "title": "Leaf Installerの言語を選択",
             "desc": "言語を変更した後、ソフトウェアは閉じられます。 Bを押してキャンセルします。",
             "system_language": "システム"
         },
-        "title": "Awoo Installerの設定を変更する",
+        "title": "Leaf Installerの設定を変更する",
         "buttons": " 選択/変更     キャンセル",
         "ultrahand_hint": "Ultrahand Overlay の GitHub リリース URL を入力",
         "sys_patch_hint": "sys-patch の GitHub リリース URL を入力",
-        "awoo_hint": "Awoo Installer の GitHub リリース URL を入力",
+        "leaf_hint": "Leaf Installer の GitHub リリース URL を入力",
         "emuiibo_hint": "emuiibo の GitHub リリース URL を入力",
         "amiibo_api_hint": "Amiibo API の JSON エンドポイント URL を入力"
     },

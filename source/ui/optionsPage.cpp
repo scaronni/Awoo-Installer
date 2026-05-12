@@ -24,7 +24,7 @@ namespace inst::ui {
         this->topRect = Rectangle::New(0, 0, 1920, 141, COLOR("#170909FF"));
         this->infoRect = Rectangle::New(0, 142, 1920, 90, COLOR("#17090980"));
         this->botRect = Rectangle::New(0, 990, 1920, 90, COLOR("#17090980"));
-        if (inst::config::gayMode) {
+        if (inst::config::noGraphics) {
             this->titleImage = Image::New(-170, 0, inst::util::loadTex("romfs:/images/logo.png"));
             this->titleImage->SetWidth(720);
             this->titleImage->SetHeight(140);
@@ -142,13 +142,13 @@ namespace inst::ui {
         autoUpdateOption->SetColor(COLOR("#FFFFFFFF"));
         autoUpdateOption->SetIcon(inst::util::loadTex(this->getMenuOptionIcon(inst::config::autoUpdate)));
         this->menu->AddItem(autoUpdateOption);
-        auto gayModeOption = pu::ui::elm::MenuItem::New("options.menu_items.gay_option"_lang);
-        gayModeOption->SetColor(COLOR("#FFFFFFFF"));
-        gayModeOption->SetIcon(inst::util::loadTex(this->getMenuOptionIcon(inst::config::gayMode)));
-        this->menu->AddItem(gayModeOption);
-        auto awooUrlOption = pu::ui::elm::MenuItem::New("options.menu_items.awoo_url"_lang + inst::util::shortenString(inst::config::awooUrl, 80, false));
-        awooUrlOption->SetColor(COLOR("#FFFFFFFF"));
-        this->menu->AddItem(awooUrlOption);
+        auto noGraphicsOption = pu::ui::elm::MenuItem::New("options.menu_items.no_graphics_option"_lang);
+        noGraphicsOption->SetColor(COLOR("#FFFFFFFF"));
+        noGraphicsOption->SetIcon(inst::util::loadTex(this->getMenuOptionIcon(inst::config::noGraphics)));
+        this->menu->AddItem(noGraphicsOption);
+        auto leafUrlOption = pu::ui::elm::MenuItem::New("options.menu_items.leaf_url"_lang + inst::util::shortenString(inst::config::leafUrl, 80, false));
+        leafUrlOption->SetColor(COLOR("#FFFFFFFF"));
+        this->menu->AddItem(leafUrlOption);
         auto ultrahandUrlOption = pu::ui::elm::MenuItem::New("options.menu_items.ultrahand_url"_lang + inst::util::shortenString(inst::config::ultrahandUrl, 80, false));
         ultrahandUrlOption->SetColor(COLOR("#FFFFFFFF"));
         this->menu->AddItem(ultrahandUrlOption);
@@ -210,10 +210,10 @@ namespace inst::ui {
                     this->setMenuText();
                     break;
                 case 5:
-                    if (inst::config::gayMode) {
-                        inst::config::gayMode = false;
-                        mainApp->mainPage->awooImage->SetVisible(true);
-                        mainApp->instpage->awooImage->SetVisible(true);
+                    if (inst::config::noGraphics) {
+                        inst::config::noGraphics = false;
+                        mainApp->mainPage->leafImage->SetVisible(true);
+                        mainApp->instpage->leafImage->SetVisible(true);
                         mainApp->instpage->titleImage->SetX(0);
                         mainApp->instpage->appVersionText->SetX(720);
                         mainApp->mainPage->titleImage->SetX(0);
@@ -228,9 +228,9 @@ namespace inst::ui {
                         mainApp->usbinstPage->appVersionText->SetX(720);
                     }
                     else {
-                        inst::config::gayMode = true;
-                        mainApp->mainPage->awooImage->SetVisible(false);
-                        mainApp->instpage->awooImage->SetVisible(false);
+                        inst::config::noGraphics = true;
+                        mainApp->mainPage->leafImage->SetVisible(false);
+                        mainApp->instpage->leafImage->SetVisible(false);
                         mainApp->instpage->titleImage->SetX(-170);
                         mainApp->instpage->appVersionText->SetX(550);
                         mainApp->mainPage->titleImage->SetX(-170);
@@ -248,9 +248,9 @@ namespace inst::ui {
                     this->setMenuText();
                     break;
                 case 6:
-                    keyboardResult = inst::util::softwareKeyboard("options.awoo_hint"_lang, inst::config::awooUrl.c_str(), 500);
+                    keyboardResult = inst::util::softwareKeyboard("options.leaf_hint"_lang, inst::config::leafUrl.c_str(), 500);
                     if (keyboardResult.size() > 0) {
-                        inst::config::awooUrl = keyboardResult;
+                        inst::config::leafUrl = keyboardResult;
                         inst::config::setConfig();
                         this->setMenuText();
                     }

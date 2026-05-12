@@ -42,9 +42,9 @@ BUILD		:=	build
 SOURCES		:=	source source/ui source/data source/install source/nx source/nx/ipc source/util source/drive
 DATA		:=	data
 INCLUDES	:=	include include/ui include/data include/install include/nx include/nx/ipc include/util include/Plutonium/Plutonium/include include/libusbhsfs/include
-APP_TITLE	:=	Awoo Installer
-APP_AUTHOR	:=	Huntereb & Behemoth
-APP_VERSION	:=	1.4.1
+APP_TITLE	:=	Leaf Installer
+APP_AUTHOR	:=	slaanesh
+APP_VERSION	:=	1.5.0
 ROMFS		:=	romfs
 
 #---------------------------------------------------------------------------------

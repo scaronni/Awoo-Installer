@@ -26,7 +26,7 @@
         },
         "applet": {
             "title": "Applet-Modus wird nicht unterstützt",
-            "desc": "Es kann zu Problemen bei der Verwendung des Awoo Installer im Applet-Modus kommen.\nWenn du Probleme hast, starte den Awoo Installer über einen installierten Titel (halte R gedrückt, während du ein Spiel startest)!"
+            "desc": "Es kann zu Problemen bei der Verwendung des Leaf Installer im Applet-Modus kommen.\nWenn du Probleme hast, starte den Leaf Installer über einen installierten Titel (halte R gedrückt, während du ein Spiel startest)!"
         },
         "buttons": " Auswählen     Beenden",
         "storage": {
@@ -38,7 +38,7 @@
         "net": {
             "help": {
                 "title": "Hilfe",
-                "desc": "Dateien können von anderen Geräten aus mit Tools wie NS-USBloader im\nTinfoil-Modus installiert werden. Um Dateien an deine Switch zu senden, öffne\neins dieser Programme auf deinem PC oder mobilen Gerät. Gib die IP-Adresse\ndeiner Switch ein (auf dem Bildschirm aufgelistet), wähle die Dateien\naus und übertrage sie dann auf deine Konsole! Wenn die von dir verwendete\nSoftware dir nicht erlaubt bestimmte Dateitypen auszuwählen,\nversuche die Dateiendung in etwas umzubenennen, dass sie akzeptiert. Der Awoo Installer\nprüft keine Dateiendungen bei Netzinstallationen!\n\nFalls das nicht klappt, kopiere einfach deine Dateien auf die SD-Karte\nund versuche die Option \"Von SD-Karte installieren\" im Hauptmenü!"
+                "desc": "Dateien können von anderen Geräten aus mit Tools wie NS-USBloader im\nTinfoil-Modus installiert werden. Um Dateien an deine Switch zu senden, öffne\neins dieser Programme auf deinem PC oder mobilen Gerät. Gib die IP-Adresse\ndeiner Switch ein (auf dem Bildschirm aufgelistet), wähle die Dateien\naus und übertrage sie dann auf deine Konsole! Wenn die von dir verwendete\nSoftware dir nicht erlaubt bestimmte Dateitypen auszuwählen,\nversuche die Dateiendung in etwas umzubenennen, dass sie akzeptiert. Der Leaf Installer\nprüft keine Dateiendungen bei Netzinstallationen!\n\nFalls das nicht klappt, kopiere einfach deine Dateien auf die SD-Karte\nund versuche die Option \"Von SD-Karte installieren\" im Hauptmenü!"
             },
             "src": {
                 "title": "Von wo aus willst du installieren?",
@@ -108,19 +108,10 @@
         },
         "nca_verify": {
             "title": "Ungültige NCA-Signatur erkannt!",
-            "desc": "Unsachgemäß signierte Software sollte nur von vertrauenswürdigen Quellen\ninstalliert werden. Dateien von gepackten Spiele Modulen und DLC-Freischaltung enthalten,\nwerden immer diese Warnung anzeigen. Du kannst diese Prüfung in den Einstellungen von Awoo Installer deaktivieren.\nBist du sicher, dass du die Installation fortsetzen möchtest?",
+            "desc": "Unsachgemäß signierte Software sollte nur von vertrauenswürdigen Quellen\ninstalliert werden. Dateien von gepackten Spiele Modulen und DLC-Freischaltung enthalten,\nwerden immer diese Warnung anzeigen. Du kannst diese Prüfung in den Einstellungen von Leaf Installer deaktivieren.\nBist du sicher, dass du die Installation fortsetzen möchtest?",
             "opt1": "Ja, ich verstehe die Risiken",
             "error": "Die gewünschte NCA ist nicht richtig signiert: "
-        },
-        "finished": [
-            "Genieße deine \"legalen Sicherheitskopien\"!",
-            "Ich bin mir sicher nachdem du das Spiel probiert hast wirst du Spaß dabei haben das Spiel tatsächlich zu kaufen!",
-            "Du hast das Spiel sicher gekauft? Nintendo dankt für deinen Kauf!",
-            "DRM zu umgehen ist toll, nicht wahr?",
-            "Du hast wahrscheinlich sechs Bäume gerettet, dadurch dass du das Spiel nicht gekauft hast!\nAll das Plastik geht irgendwo hin!",
-            "Nintendo Ninjas wurden zu deinem Standort gesendet.",
-            "Und wir mussten nicht mal politische Ideologien in deinen Rachen stopfen!"
-        ]
+        }
     },
     "sig": {
         "confirm_title": "Ultrahand und Overlays installieren?",
@@ -144,15 +135,15 @@
             "nca_verify": "Verifiziere NCA Signatur vor der Installation",
             "boost_mode": "Aktiviere \"Boost-Modus\" während der Installation",
             "ask_delete": "Frage ob installierte Titel gelöscht werden sollen",
-            "auto_update": "Suche automatisch nach Updates für Awoo Installer",
-            "gay_option": "Entferne Anime",
-            "awoo_url": "Awoo Installer URL: ",
+            "auto_update": "Suche automatisch nach Updates für Leaf Installer",
+            "no_graphics_option": "Blätter entfernen",
+            "leaf_url": "Leaf Installer URL: ",
             "ultrahand_url": "Ultrahand Overlay URL: ",
             "sys_patch_url": "sys-patch URL: ",
             "emuiibo_url": "emuiibo URL: ",
             "amiibo_api_url": "Amiibo-API URL: ",
             "language": "Sprache: ",
-            "check_update": "Suche nach Updates für Awoo Installer",
+            "check_update": "Suche nach Updates für Leaf Installer",
             "credits": "Anerkennung"
         },
         "nca_warn": {
@@ -162,32 +153,32 @@
         },
         "update": {
             "title": "Neue Version verfügbar",
-            "desc0": "Awoo Installer ",
+            "desc0": "Leaf Installer ",
             "desc1": " ist jetzt verfügbar! Bereit zu aktualisieren?",
             "opt0": "Aktualisieren",
-            "top_info": "Aktualisierung von Awoo Installer ",
-            "bot_info": "Lade Awoo Installer herunter ",
-            "bot_info2": "Entpacke Awoo Installer ",
+            "top_info": "Aktualisierung von Leaf Installer ",
+            "bot_info": "Lade Leaf Installer herunter ",
+            "bot_info2": "Entpacke Leaf Installer ",
             "complete": "Aktualisierung vollständig!",
             "failed": "Aktualisierung fehlgeschlagen!",
             "end_desc": "Die Software wird nun beendet.",
             "title_check_fail": "Keine Aktualisierungen gefunden",
-            "desc_check_fail": "Du bist auf der aktuellsten Version des Awoo Installer!"
+            "desc_check_fail": "Du bist auf der aktuellsten Version des Leaf Installer!"
         },
         "credits": {
             "title": "Vielen Dank an die folgenden Leute!",
-            "desc": "- HookedBehemoth für viele Beiträge\n- Adubbz und andere Mitwirkende für Tinfoil\n- XorTroll für Plutonium und Goldleaf\n- blawar (Frauenwürger) und nicoboss für NSZ Unterstützung\n- Die netten Leute auf AtlasNX Discuck (Immerhin ein paar davon)\n- Die netten Leute auf RetroNX Discuck (ohne direkte Beteiligung)\n- namako8982 für die Momiji-Kunst\n- TheXzoron dafür das er ein baka ist\n- Claude for the incredible speed on iterating over features"
+            "desc": "- Plutonium (https://github.com/XorTroll/Plutonium) graphics library\n- Original Awoo Installer (https://github.com/Huntereb/Awoo-Installer)\n- Fork of Awoo Installer (https://github.com/harmonsir/Awoo-Installer) with HTTP and USB hard drive support\n- Claude (https://claude.ai/) for the incredible speed on iterating over features"
         },
         "language": {
-            "title": "Wähle Awoo Installer Sprache",
+            "title": "Wähle Leaf Installer Sprache",
             "desc": "Die Software wird danach beendet. Drücke B um den Vorgang abzubrechen.",
             "system_language": "System"
         },
-        "title": "Ändere Awoo Installer Einstellungen!",
+        "title": "Ändere Leaf Installer Einstellungen!",
         "buttons": " Auswählen/Ändern     Abbrechen ",
         "ultrahand_hint": "GitHub-Releases-URL für Ultrahand Overlay eingeben",
         "sys_patch_hint": "GitHub-Releases-URL für sys-patch eingeben",
-        "awoo_hint": "GitHub-Releases-URL für Awoo Installer eingeben",
+        "leaf_hint": "GitHub-Releases-URL für Leaf Installer eingeben",
         "emuiibo_hint": "GitHub-Releases-URL für emuiibo eingeben",
         "amiibo_api_hint": "Amiibo-API JSON-Endpunkt-URL eingeben"
     },

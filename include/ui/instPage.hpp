@@ -13,7 +13,7 @@ namespace inst::ui {
             TextBlock::Ref fileNameText;
             TextBlock::Ref installInfoText;
             pu::ui::elm::ProgressBar::Ref installBar;
-            Image::Ref awooImage;
+            Image::Ref leafImage;
             Image::Ref titleImage;
             TextBlock::Ref appVersionText;
             static void setTopInstInfoText(std::string ourText);

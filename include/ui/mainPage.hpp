@@ -16,7 +16,7 @@ namespace inst::ui {
             void settingsMenuItem_Click();
             void exitMenuItem_Click();
             void onInput(u64 Down, u64 Up, u64 Held, pu::ui::TouchPoint Pos);
-            Image::Ref awooImage;
+            Image::Ref leafImage;
             Image::Ref titleImage;
             TextBlock::Ref appVersionText;
         private:

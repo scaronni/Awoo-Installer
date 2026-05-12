@@ -26,7 +26,7 @@
         },
         "applet": {
             "title": "Le mode Applet n'est pas compatible",
-            "desc": "Vous pouvez rencontrer des problèmes en utilisant Awoo Installer en mode Applet.\n\n Si vous avez des problèmes, veuillez lancer Awoo en mode 'non-Applet' (Maintenez R pendant le démarrage d'un jeu)!"
+            "desc": "Vous pouvez rencontrer des problèmes en utilisant Leaf Installer en mode Applet.\n\n Si vous avez des problèmes, veuillez lancer Leaf en mode 'non-Applet' (Maintenez R pendant le démarrage d'un jeu)!"
         },
         "buttons": " Select     Quitter",
         "storage": {
@@ -38,7 +38,7 @@
         "net": {
             "help": {
                 "title": "Aide",
-                "desc": "Les fichiers peuvent être installés à distance depuis vos autres périphériques à l'aide d'outils\ntels que NS-USBloader en mode Tinfoil.\n\n Pour envoyer des fichiers à votre Switch, ouvrez l'un de ces logiciels\n sur votre PC ou votre appareil mobile, entrez\nl'adresse IP de votre Switch (indiquée à l'écran), sélectionnez vos fichiers, puis téléchargez-les\nsur votre console ! Si le logiciel que vous utilisez ne vous permet pas de sélectionner des types de fichiers\nspécifiques, essayez de modifier l'extension en quelque chose qu'il accepte.\nAwoo Installer ne se soucie pas des extensions de fichiers lors des installations via le net !\n\nSi vous ne comprenez pas, copiez simplement vos fichiers sur votre carte SD et essayez\nl'option \"Installer à partir de la carte SD\" depuis le menu principal!"
+                "desc": "Les fichiers peuvent être installés à distance depuis vos autres périphériques à l'aide d'outils\ntels que NS-USBloader en mode Tinfoil.\n\n Pour envoyer des fichiers à votre Switch, ouvrez l'un de ces logiciels\n sur votre PC ou votre appareil mobile, entrez\nl'adresse IP de votre Switch (indiquée à l'écran), sélectionnez vos fichiers, puis téléchargez-les\nsur votre console ! Si le logiciel que vous utilisez ne vous permet pas de sélectionner des types de fichiers\nspécifiques, essayez de modifier l'extension en quelque chose qu'il accepte.\nLeaf Installer ne se soucie pas des extensions de fichiers lors des installations via le net !\n\nSi vous ne comprenez pas, copiez simplement vos fichiers sur votre carte SD et essayez\nl'option \"Installer à partir de la carte SD\" depuis le menu principal!"
             },
             "src": {
                 "title": "D'où voulez-vous installer ?",
@@ -108,19 +108,10 @@
         },
         "nca_verify": {
             "title": "Signature NCA invalide détectée!",
-            "desc": "Les logiciels incorrectement signés ne doivent être installés qu'à partir de\nsources dignes de confiance. Les fichiers contenant des repacks de cartouches et des DLC\nafficheront toujours cet avertissement. Vous pouvez désactiver cette vérification dans les paramètres de Awoo Installer.\n\nEtes-vous sûr de vouloir continuer l'installation ?",
+            "desc": "Les logiciels incorrectement signés ne doivent être installés qu'à partir de\nsources dignes de confiance. Les fichiers contenant des repacks de cartouches et des DLC\nafficheront toujours cet avertissement. Vous pouvez désactiver cette vérification dans les paramètres de Leaf Installer.\n\nEtes-vous sûr de vouloir continuer l'installation ?",
             "opt1": "Oui, je comprends les risques",
             "error": "Le NCA demandé n'est pas correctement signé: "
-        },
-        "finished": [
-            "Profitez bien de vos \"backups légaux\"!",
-            "Je suis sûr qu'après avoir essayé le jeu, vous prendrez beaucoup de plaisir à l'acheter !",
-            "Vous achetez vos jeux ? Nintendo-san vous remercie de votre achat!",
-            "Contourner les DRM, c'est génial, non ?",
-            "Vous avez probablement sauvé genre six arbres en n'achetant pas le jeu ! Tout ce plastique va bien quelque part !",
-            "Des ninjas Nintendo ont été envoyés à votre emplacement actuel.",
-            "Et nous n'avons même pas eu à vous enfoncer une idéologie politique dans le crâne pour en arriver là !"
-        ]
+        }
     },
     "sig": {
         "confirm_title": "Installer Ultrahand et overlays ?",
@@ -144,15 +135,15 @@
             "nca_verify": "Vérifier les signatures des NCA avant l'installation",
             "boost_mode": "Activer le  \"boost mode\" pendant l'installation",
             "ask_delete": "Demande de suppression des fichiers originaux après l'installation",
-            "auto_update": "Vérifier les mises à jour de l'installateur Awoo automatiquement",
-            "gay_option": "Enlever la catgirl dans le menu",
-            "awoo_url": "URL Awoo Installer : ",
+            "auto_update": "Vérifier les mises à jour de l'installateur Leaf automatiquement",
+            "no_graphics_option": "Retirer les feuilles",
+            "leaf_url": "URL Leaf Installer : ",
             "ultrahand_url": "URL Ultrahand Overlay : ",
             "sys_patch_url": "URL sys-patch : ",
             "emuiibo_url": "URL emuiibo : ",
             "amiibo_api_url": "URL API Amiibo : ",
             "language": "Langage: ",
-            "check_update": "Vérifiez les mises à jour de l'installateur Awoo",
+            "check_update": "Vérifiez les mises à jour de l'installateur Leaf",
             "credits": "Crédits"
         },
         "nca_warn": {
@@ -162,32 +153,32 @@
         },
         "update": {
             "title": "Mise à jour disponible",
-            "desc0": "Awoo Installer ",
+            "desc0": "Leaf Installer ",
             "desc1": " est disponible dès maintenant ! Prêt à mettre à jour ?",
             "opt0": "Mise à jour",
-            "top_info": "Mise à jour de l'installateur Awoo ",
-            "bot_info": "Téléchargement de l'installateur Awoo ",
-            "bot_info2": "Extraction de l'installateur Awoo ",
+            "top_info": "Mise à jour de l'installateur Leaf ",
+            "bot_info": "Téléchargement de l'installateur Leaf ",
+            "bot_info2": "Extraction de l'installateur Leaf ",
             "complete": "Mise à jour complète !",
             "failed": "La mise à jour a échoué !",
             "end_desc": "Le logiciel sera maintenant fermé.",
             "title_check_fail": "Aucune mise à jour trouvée",
-            "desc_check_fail": "Vous êtes sur la dernière version de Awoo Installer !"
+            "desc_check_fail": "Vous êtes sur la dernière version de Leaf Installer !"
         },
         "credits": {
             "title": "Merci aux personnes suivantes !",
-            "desc": "- HookedBehemoth pour BEAUCOUP de contributions\n- Adubbz et d'autres contributeurs pour Tinfoil\n- XorTroll pour Plutonium et Goldleaf\n- blawar (étrangleur de femme) et nicoboss pour le support des NSZ\n- Les personnes aimables du Discord AtlasNX (ou du moins certains d'entre eux)\n- Les gens aussi aimables du Discord RetroNX (sans participation directe)\n- namako8982 pour l'art Momiji \n- TheXzoron pour avoir été un baka\n- Claude for the incredible speed on iterating over features"
+            "desc": "- Plutonium (https://github.com/XorTroll/Plutonium) graphics library\n- Original Awoo Installer (https://github.com/Huntereb/Awoo-Installer)\n- Fork of Awoo Installer (https://github.com/harmonsir/Awoo-Installer) with HTTP and USB hard drive support\n- Claude (https://claude.ai/) for the incredible speed on iterating over features"
         },
         "language": {
-            "title": "Sélectionnez la langue de Awoo Installer",
+            "title": "Sélectionnez la langue de Leaf Installer",
             "desc": "Le logiciel sera fermé après avoir changé de langue. Appuyez sur B pour annuler.",
             "system_language": "Système"
         },
-        "title": "Modifiez les paramètres de Awoo Installler !",
+        "title": "Modifiez les paramètres de Leaf Installler !",
         "buttons": " Sélectionner/Modifier     Annuler",
         "ultrahand_hint": "Entrez l'URL des releases GitHub pour Ultrahand Overlay",
         "sys_patch_hint": "Entrez l'URL des releases GitHub pour sys-patch",
-        "awoo_hint": "Entrez l'URL des releases GitHub pour Awoo Installer",
+        "leaf_hint": "Entrez l'URL des releases GitHub pour Leaf Installer",
         "emuiibo_hint": "Entrez l'URL des releases GitHub pour emuiibo",
         "amiibo_api_hint": "Entrez l'URL du point de terminaison JSON de l'API Amiibo"
     },

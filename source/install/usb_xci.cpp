@@ -32,7 +32,7 @@ SOFTWARE.
 #include "util/error.hpp"
 #include "util/debug.h"
 #include "util/util.hpp"
-#include "util/usb_comms_awoo.h"
+#include "util/usb_comms_leaf.h"
 #include "util/lang.hpp"
 #include "ui/instPage.hpp"
 
@@ -68,7 +68,7 @@ namespace tin::install::xci
         {
             while (sizeRemaining && !stopThreadsUsbXci)
             {
-                tmpSizeRead = awoo_usbCommsRead(buf, std::min(sizeRemaining, (u64)0x800000), 5000000000);
+                tmpSizeRead = leaf_usbCommsRead(buf, std::min(sizeRemaining, (u64)0x800000), 5000000000);
                 if (tmpSizeRead == 0) THROW_FORMAT(("inst.usb.error"_lang).c_str());
                 sizeRemaining -= tmpSizeRead;
 

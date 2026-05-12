@@ -14,7 +14,7 @@ namespace inst::ui {
         this->Add(inst::util::makeBackgroundImage());
         this->topRect = Rectangle::New(0, 0, 1920, 141, COLOR("#170909FF"));
         this->infoRect = Rectangle::New(0, 142, 1920, 90, COLOR("#17090980"));
-        if (inst::config::gayMode) {
+        if (inst::config::noGraphics) {
             this->titleImage = Image::New(-170, 0, inst::util::loadTex("romfs:/images/logo.png"));
             this->titleImage->SetWidth(720);
             this->titleImage->SetHeight(140);
@@ -40,10 +40,10 @@ namespace inst::ui {
         this->installInfoText->SetColor(COLOR("#FFFFFFFF"));
         this->installBar = pu::ui::elm::ProgressBar::New(15, 900, 1275, 60, 100.0f);
         this->installBar->SetBackgroundColor(COLOR("#222222FF"));
-        if (std::filesystem::exists(inst::config::appDir + "/awoo_inst.png")) this->awooImage = Image::New(615, 285, inst::util::loadTex(inst::config::appDir + "/awoo_inst.png"));
-        else this->awooImage = Image::New(765, 249, inst::util::loadTex("romfs:/images/awoos/7d8a05cddfef6da4901b20d2698d5a71.png"));
-        this->awooImage->SetWidth(1146);
-        this->awooImage->SetHeight(831);
+        if (std::filesystem::exists(inst::config::appDir + "/leaf_inst.png")) this->leafImage = Image::New(615, 285, inst::util::loadTex(inst::config::appDir + "/leaf_inst.png"));
+        else this->leafImage = Image::New(765, 249, inst::util::loadTex("romfs:/images/leaf_inst.png"));
+        this->leafImage->SetWidth(1146);
+        this->leafImage->SetHeight(831);
         this->Add(this->topRect);
         this->Add(this->infoRect);
         this->Add(this->titleImage);
@@ -53,8 +53,8 @@ namespace inst::ui {
         this->Add(this->fileNameText);
         this->Add(this->installInfoText);
         this->Add(this->installBar);
-        this->Add(this->awooImage);
-        if (inst::config::gayMode) this->awooImage->SetVisible(false);
+        this->Add(this->leafImage);
+        if (inst::config::noGraphics) this->leafImage->SetVisible(false);
     }
 
     void instPage::setTopInstInfoText(std::string ourText){
@@ -98,7 +98,7 @@ namespace inst::ui {
         mainApp->instpage->installInfoText->SetText("");
         mainApp->instpage->installBar->SetProgress(0);
         mainApp->instpage->installBar->SetVisible(false);
-        mainApp->instpage->awooImage->SetVisible(!inst::config::gayMode);
+        mainApp->instpage->leafImage->SetVisible(!inst::config::noGraphics);
         mainApp->LoadLayout(mainApp->instpage);
         mainApp->CallForRender();
     }

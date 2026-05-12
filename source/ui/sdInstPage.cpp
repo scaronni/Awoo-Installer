@@ -18,7 +18,7 @@ namespace inst::ui {
         this->topRect = Rectangle::New(0, 0, 1920, 141, COLOR("#170909FF"));
         this->infoRect = Rectangle::New(0, 142, 1920, 90, COLOR("#17090980"));
         this->botRect = Rectangle::New(0, 990, 1920, 90, COLOR("#17090980"));
-        if (inst::config::gayMode) {
+        if (inst::config::noGraphics) {
             this->titleImage = Image::New(-170, 0, inst::util::loadTex("romfs:/images/logo.png"));
             this->titleImage->SetWidth(720);
             this->titleImage->SetHeight(140);

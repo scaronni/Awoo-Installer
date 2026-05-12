@@ -14,7 +14,7 @@
 #include "util/config.hpp"
 #include "util/curl.hpp"
 #include "ui/MainApplication.hpp"
-#include "util/usb_comms_awoo.h"
+#include "util/usb_comms_leaf.h"
 #include "util/json.hpp"
 #include "util/lang.hpp"
 #include "nx/usbhdd.h"
@@ -106,18 +106,22 @@ namespace inst::util {
 
         socketInitializeDefault();
         nsInitialize();
+        // Enable MP3 decoding (via mpg123, already linked in the Makefile). Without
+        // this, Mix_LoadWAV in playAudio would only accept the built-in WAV format.
+        Mix_Init(MIX_INIT_MP3);
         #ifdef __DEBUG__
             nxlinkStdio();
         #endif
-        awoo_usbCommsInitialize();
+        leaf_usbCommsInitialize();
         nx::hdd::init();
     }
 
     void deinitApp () {
         nx::hdd::exit();
+        Mix_Quit();
         nsExit();
         socketExit();
-        awoo_usbCommsExit();
+        leaf_usbCommsExit();
     }
 
     void initInstallServices() {
@@ -360,6 +364,10 @@ namespace inst::util {
 
         if(Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers) != 0) return;
 
+        // Despite the misleading name, Mix_LoadWAV is SDL_mixer's standard "load
+        // short sound chunk" function; it accepts every format SDL_mixer has been
+        // initialized for via Mix_Init (here, WAV + MP3 — see initApp). Mix_LoadMUS
+        // is the alternative for long streamed music, overkill for these one-shot SFX.
         Mix_Chunk *sound = NULL;
         sound = Mix_LoadWAV(audioPath.c_str());
         if(sound == NULL) {
@@ -384,7 +392,7 @@ namespace inst::util {
     }
     
    std::vector<std::string> checkForAppUpdate () {
-        auto info = fetchLatestRelease(inst::config::awooUrl);
+        auto info = fetchLatestRelease(inst::config::leafUrl);
         if (info.empty()) return {};
         std::string tag = info[0];
         if (!tag.empty() && (tag[0] == 'v' || tag[0] == 'V')) tag.erase(0, 1);

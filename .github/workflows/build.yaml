@@ -1,4 +1,4 @@
-name: Awoo-Installer
+name: Leaf-Installer
 
 on:
   push:
@@ -24,14 +24,14 @@ jobs:
       - name: Mark repo as safe directory
         run: git config --system --add safe.directory '*'
 
-      - name: Build Awoo
+      - name: Build Leaf
         run: make -j"$(nproc)" all
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7
         with:
-          name: Awoo-Installer
-          path: Awoo-Installer.nro
+          name: Leaf-Installer
+          path: Leaf-Installer.nro
           if-no-files-found: error
 
   release:
@@ -46,20 +46,20 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v8
         with:
-          name: Awoo-Installer
+          name: Leaf-Installer
           path: dist
 
       - name: Create zip package (max compression)
         run: |
-          mkdir -p staging/switch/Awoo-Installer
-          cp dist/Awoo-Installer.nro staging/switch/Awoo-Installer/Awoo-Installer.nro
+          mkdir -p staging/switch/Leaf-Installer
+          cp dist/Leaf-Installer.nro staging/switch/Leaf-Installer/Leaf-Installer.nro
           cd staging
-          zip -9 -r ../dist/Awoo-Installer.zip switch
+          zip -9 -r ../dist/Leaf-Installer.zip switch
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
-          files: dist/Awoo-Installer.zip
+          files: dist/Leaf-Installer.zip
           prerelease: ${{ contains(github.ref, '-rc') || contains(github.ref, '-beta') }}
           draft: false
         env:

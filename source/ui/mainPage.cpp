@@ -41,7 +41,7 @@ namespace inst::ui {
         this->Add(inst::util::makeBackgroundImage());
         this->topRect = Rectangle::New(0, 0, 1920, 141, COLOR("#170909FF"));
         this->botRect = Rectangle::New(0, 988, 1920, 92, COLOR("#17090980"));
-        if (inst::config::gayMode) {
+        if (inst::config::noGraphics) {
             this->titleImage = Image::New(-170, 0, inst::util::loadTex("romfs:/images/logo.png"));
             this->titleImage->SetWidth(720);
             this->titleImage->SetHeight(140);
@@ -83,10 +83,10 @@ namespace inst::ui {
         this->exitMenuItem = pu::ui::elm::MenuItem::New("main.menu.exit"_lang);
         this->exitMenuItem->SetColor(COLOR("#FFFFFFFF"));
         this->exitMenuItem->SetIcon(inst::util::loadTex("romfs:/images/icons/exit-run.png"));
-        if (std::filesystem::exists(inst::config::appDir + "/awoo_main.png")) this->awooImage = Image::New(615, 285, inst::util::loadTex(inst::config::appDir + "/awoo_main.png"));
-        else this->awooImage = Image::New(615, 285, inst::util::loadTex("romfs:/images/awoos/5bbdbcf9a5625cd307c9e9bc360d78bd.png"));
-        this->awooImage->SetWidth(1296);
-        this->awooImage->SetHeight(732);
+        if (std::filesystem::exists(inst::config::appDir + "/leaf_main.png")) this->leafImage = Image::New(615, 285, inst::util::loadTex(inst::config::appDir + "/leaf_main.png"));
+        else this->leafImage = Image::New(615, 285, inst::util::loadTex("romfs:/images/leaf_main.png"));
+        this->leafImage->SetWidth(1296);
+        this->leafImage->SetHeight(732);
         this->Add(this->topRect);
         this->Add(this->botRect);
         this->Add(this->titleImage);
@@ -101,8 +101,8 @@ namespace inst::ui {
         this->optionMenu->AddItem(this->settingsMenuItem);
         this->optionMenu->AddItem(this->exitMenuItem);
         this->Add(this->optionMenu);
-        this->Add(this->awooImage);
-        this->awooImage->SetVisible(!inst::config::gayMode);
+        this->Add(this->leafImage);
+        this->leafImage->SetVisible(!inst::config::noGraphics);
         this->AddRenderCallback(mainMenuThread);
     }
 

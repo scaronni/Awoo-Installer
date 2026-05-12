@@ -21,7 +21,7 @@ SOFTWARE.
 */
 
 #include "util/usb_util.hpp"
-#include "util/usb_comms_awoo.h"
+#include "util/usb_comms_leaf.h"
 
 #include "data/byte_buffer.hpp"
 #include "debug.h"
@@ -77,7 +77,7 @@ namespace tin::util
 
         while (sizeRemaining)
         {
-            tmpSizeRead = awoo_usbCommsRead(tmpBuf, sizeRemaining, timeout);
+            tmpSizeRead = leaf_usbCommsRead(tmpBuf, sizeRemaining, timeout);
             if (tmpSizeRead == 0) return 0;
             tmpBuf += tmpSizeRead;
             sizeRemaining -= tmpSizeRead;
@@ -94,7 +94,7 @@ namespace tin::util
 
         while (cursize)
         {
-            tmpsize = awoo_usbCommsWrite(bufptr, cursize, timeout);
+            tmpsize = leaf_usbCommsWrite(bufptr, cursize, timeout);
             if (tmpsize == 0) return 0;
             bufptr += tmpsize;
             cursize -= tmpsize;

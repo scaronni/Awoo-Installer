@@ -6,7 +6,7 @@
 #include "switch/services/fatal.h"
 #include "switch/services/usbds.h"
 #include "switch/runtime/hosversion.h"
-#include "util/usb_comms_awoo.h"
+#include "util/usb_comms_leaf.h"
 #include <stdio.h>
 
 #define TOTAL_INTERFACES 4
@@ -29,13 +29,13 @@ static bool g_usbCommsErrorHandling = 0;
 
 static RwLock g_usbCommsLock;
 
-static Result _usbCommsInterfaceInit1x(u32 intf_ind, const awoo_UsbCommsInterfaceInfo *info);
-static Result _usbCommsInterfaceInit5x(u32 intf_ind, const awoo_UsbCommsInterfaceInfo *info);
-static Result _usbCommsInterfaceInit(u32 intf_ind, const awoo_UsbCommsInterfaceInfo *info);
+static Result _usbCommsInterfaceInit1x(u32 intf_ind, const leaf_UsbCommsInterfaceInfo *info);
+static Result _usbCommsInterfaceInit5x(u32 intf_ind, const leaf_UsbCommsInterfaceInfo *info);
+static Result _usbCommsInterfaceInit(u32 intf_ind, const leaf_UsbCommsInterfaceInfo *info);
 
 static Result _usbCommsWrite(usbCommsInterface *interface, const void* buffer, size_t size, size_t *transferredSize, u64 timeout);
 
-static void _usbCommsUpdateInterfaceDescriptor(struct usb_interface_descriptor *desc, const awoo_UsbCommsInterfaceInfo *info) {
+static void _usbCommsUpdateInterfaceDescriptor(struct usb_interface_descriptor *desc, const leaf_UsbCommsInterfaceInfo *info) {
     if (info != NULL) {
         desc->bInterfaceClass = info->bInterfaceClass;
         desc->bInterfaceSubClass = info->bInterfaceSubClass;
@@ -43,7 +43,7 @@ static void _usbCommsUpdateInterfaceDescriptor(struct usb_interface_descriptor *
     }
 }
 
-Result awoo_usbCommsInitializeEx(u32 num_interfaces, const awoo_UsbCommsInterfaceInfo *infos)
+Result leaf_usbCommsInitializeEx(u32 num_interfaces, const leaf_UsbCommsInterfaceInfo *infos)
 {
     Result rc = 0;
     rwlockWriteLock(&g_usbCommsLock);
@@ -150,15 +150,15 @@ Result awoo_usbCommsInitializeEx(u32 num_interfaces, const awoo_UsbCommsInterfac
     rwlockWriteUnlock(&g_usbCommsLock);
 
     if (R_FAILED(rc)) {
-        awoo_usbCommsExit();
+        leaf_usbCommsExit();
     }
 
     return rc;
 }
 
-Result awoo_usbCommsInitialize(void)
+Result leaf_usbCommsInitialize(void)
 {
-    return awoo_usbCommsInitializeEx(1, NULL);
+    return leaf_usbCommsInitializeEx(1, NULL);
 }
 
 static void _usbCommsInterfaceFree(usbCommsInterface *interface)
@@ -189,7 +189,7 @@ static void _usbCommsInterfaceFree(usbCommsInterface *interface)
     rwlockWriteUnlock(&interface->lock);
 }
 
-void awoo_usbCommsExit(void)
+void leaf_usbCommsExit(void)
 {
     u32 i;
 
@@ -207,7 +207,7 @@ void awoo_usbCommsExit(void)
     }
 }
 
-static Result _usbCommsInterfaceInit(u32 intf_ind, const awoo_UsbCommsInterfaceInfo *info)
+static Result _usbCommsInterfaceInit(u32 intf_ind, const leaf_UsbCommsInterfaceInfo *info)
 {
     if (hosversionAtLeast(5,0,0)) {
         return _usbCommsInterfaceInit5x(intf_ind, info);
@@ -216,7 +216,7 @@ static Result _usbCommsInterfaceInit(u32 intf_ind, const awoo_UsbCommsInterfaceI
     }
 }
 
-static Result _usbCommsInterfaceInit5x(u32 intf_ind, const awoo_UsbCommsInterfaceInfo *info)
+static Result _usbCommsInterfaceInit5x(u32 intf_ind, const leaf_UsbCommsInterfaceInfo *info)
 {
     Result rc = 0;
     usbCommsInterface *interface = &g_usbCommsInterfaces[intf_ind];
@@ -327,7 +327,7 @@ static Result _usbCommsInterfaceInit5x(u32 intf_ind, const awoo_UsbCommsInterfac
 }
 
 
-static Result _usbCommsInterfaceInit1x(u32 intf_ind, const awoo_UsbCommsInterfaceInfo *info)
+static Result _usbCommsInterfaceInit1x(u32 intf_ind, const leaf_UsbCommsInterfaceInfo *info)
 {
     Result rc = 0;
     usbCommsInterface *interface = &g_usbCommsInterfaces[intf_ind];
@@ -393,7 +393,7 @@ static Result _usbCommsInterfaceInit1x(u32 intf_ind, const awoo_UsbCommsInterfac
     return rc;
 }
 
-void awoo_usbCommsSetErrorHandling(bool flag) {
+void leaf_usbCommsSetErrorHandling(bool flag) {
     g_usbCommsErrorHandling = flag;
 }
 
@@ -539,7 +539,7 @@ static Result _usbCommsWrite(usbCommsInterface *interface, const void* buffer, s
     return rc;
 }
 
-size_t awoo_usbCommsReadEx(void* buffer, size_t size, u32 interface, u64 timeout)
+size_t leaf_usbCommsReadEx(void* buffer, size_t size, u32 interface, u64 timeout)
 {
     size_t transferredSize=0;
     Result rc;
@@ -561,12 +561,12 @@ size_t awoo_usbCommsReadEx(void* buffer, size_t size, u32 interface, u64 timeout
     return 0;
 }
 
-size_t awoo_usbCommsRead(void* buffer, size_t size, u64 timeout)
+size_t leaf_usbCommsRead(void* buffer, size_t size, u64 timeout)
 {
-    return awoo_usbCommsReadEx(buffer, size, 0, timeout);
+    return leaf_usbCommsReadEx(buffer, size, 0, timeout);
 }
 
-size_t awoo_usbCommsWriteEx(const void* buffer, size_t size, u32 interface, u64 timeout)
+size_t leaf_usbCommsWriteEx(const void* buffer, size_t size, u32 interface, u64 timeout)
 {
     size_t transferredSize=0;
     Result rc;
@@ -588,8 +588,8 @@ size_t awoo_usbCommsWriteEx(const void* buffer, size_t size, u32 interface, u64 
     return 0;
 }
 
-size_t awoo_usbCommsWrite(const void* buffer, size_t size, u64 timeout)
+size_t leaf_usbCommsWrite(const void* buffer, size_t size, u64 timeout)
 {
-    return awoo_usbCommsWriteEx(buffer, size, 0, timeout);
+    return leaf_usbCommsWriteEx(buffer, size, 0, timeout);
 }
 
